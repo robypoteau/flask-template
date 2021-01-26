@@ -19,8 +19,8 @@ test:
 	    app tests
 
 run:
-		export FLASK_APP=app/app.py; \
 		export FLASK_ENV=development; \
+		export FLASK_APP=main.py; \
 		flask run
 
 package:
