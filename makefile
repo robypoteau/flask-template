@@ -34,7 +34,7 @@ run: ## Run development server
 	export FLASK_APP=app; \
 	flask run &
 
-package:
+package: ## Package application
 	python setup.py sdist
 
 clean: ## Clean build
