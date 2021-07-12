@@ -25,8 +25,10 @@ unit-tests:  ## Run unit test
 	    --verbose \
 	    app tests
 
-functional-tests: run ## Run functional test
+functional-tests: run kill-server ## Run functional test
 	./env/bin/python -m unittest functional_tests/tests.py
+
+kill-server:
 	@lsof -ti :5000 | xargs kill
 
 run: ## Run development server

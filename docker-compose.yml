@@ -1,0 +1,9 @@
+services:
+    flask:
+        # restart: always
+        build: ./flask-app
+        command: gunicorn -w 4 -b 0.0.0.0:8000 app:app
+        volumes:
+        - ./flask-app/:/usr/src/app/
+        ports:
+        - "8000:8000"
